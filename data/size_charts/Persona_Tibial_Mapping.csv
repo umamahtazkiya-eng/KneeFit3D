@@ -1,0 +1,10 @@
+Persona_Size,Target_ML_mm,Original_Size,Source_Path,Original_ML_mm,ML_Error_Before_mm,Scale_Factor
+A,57.7,S1,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/S1/Tibial_Plate(L&R)_S1.stl,59.038490295410156,1.3384902954101534,0.9773285141826499
+B,60.8,S2,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/S2/Tibial_Plate(L&R)_S2.stl,60.95844268798828,0.1584426879882841,0.9974008081407318
+C,63.8,S3,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/S3/Tibial_Plate(L&R)_S3.stl,62.87839126586914,0.9216087341308565,1.014657002438787
+D,67.0,M1,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/M1/Tibial_Plate(L&R)_M1.stl,66.63829803466797,0.36170196533203125,1.0054278391855664
+E,71.0,M3,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/M3/Tibial_Plate(L&R)_M3.stl,70.47819519042969,0.5218048095703125,1.0074037765604016
+F,75.1,L1,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/L1/Tibial_Plate(L&R)_L1.stl,74.31809997558594,0.7819000244140568,1.0105209905079775
+G,79.0,L3,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/L3/Tibial_Plate(L&R)_L3.stl,78.0780029296875,0.9219970703125,1.0118086661507313
+H,83.0,L4,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/L4/Tibial_Plate(L&R)_L4.stl,79.99795532226562,3.002044677734375,1.037526517592117
+J,88.1,L4,/content/drive/MyDrive/TAMasStanis/TKA_Original_STL/12 Size Range STLs/L4/Tibial_Plate(L&R)_L4.stl,79.99795532226562,8.10204467773437,1.101278146986331

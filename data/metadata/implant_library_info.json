@@ -1,0 +1,39 @@
+{
+  "project": "KneeFit3D",
+  "original_tka_library": {
+    "source_folder": "TKA_Original_STL/12 Size Range STLs",
+    "size_families": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ]
+  },
+  "persona_femoral": {
+    "geometry_status": "Research-scaled proxy",
+    "oem_cad": false
+  },
+  "persona_tibial": {
+    "available_sizes": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "J"
+    ],
+    "geometry_status": "Research-scaled corrected proxy",
+    "oem_cad": false
+  }
+}

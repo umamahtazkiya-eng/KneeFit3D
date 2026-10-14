@@ -1,0 +1,10 @@
+Persona_Size,Source_Size,Target_ML_mm,Actual_ML_mm,Absolute_Error_mm,Scale_Factor,X_mm,Y_mm,Z_mm,Output_File,Status
+A,S1,57.7,57.7,0.0,0.9773285141826499,57.7,30.992645263671875,28.781999588012695,Persona_Tibial_Size_A_ML_Matched_Research.stl,ML matched only - research
+B,S2,60.8,60.8,0.0,0.9974008081407318,60.8,32.00053596496582,29.718000411987305,Persona_Tibial_Size_B_ML_Matched_Research.stl,ML matched only - research
+C,S3,63.8,63.8,0.0,1.014657002438787,63.8,33.00842761993408,30.65399980545044,Persona_Tibial_Size_C_ML_Matched_Research.stl,ML matched only - research
+D,M1,67.0,67.0,0.0,1.0054278391855664,67.0,34.98221397399902,32.48699998855591,Persona_Tibial_Size_D_ML_Matched_Research.stl,ML matched only - research
+E,M3,71.0,71.0,0.0,1.0074037765604016,71.0,36.99799728393555,34.35900020599365,Persona_Tibial_Size_E_ML_Matched_Research.stl,ML matched only - research
+F,L1,75.1,75.1,0.0,1.0105209905079775,75.1,39.013776779174805,36.231000900268555,Persona_Tibial_Size_F_ML_Matched_Research.stl,ML matched only - research
+G,L3,79.0,79.0,0.0,1.0118086661507313,79.0,40.98756408691406,38.06400108337402,Persona_Tibial_Size_G_ML_Matched_Research.stl,ML matched only - research
+H,L4,83.0,83.00000000000001,1.4210854715202004e-14,1.037526517592117,83.00000000000001,41.99545478820801,39.0,Persona_Tibial_Size_H_ML_Matched_Research.stl,ML matched only - research
+J,L4,88.1,88.1,0.0,1.101278146986331,88.1,41.99545478820801,39.0,Persona_Tibial_Size_J_ML_Matched_Research.stl,ML matched only - research
