@@ -5,3 +5,17 @@ scipy
 trimesh
 shapely
 PyYAML
+
+# ==========================================================
+# SYSTEM REQUIREMENT
+# ==========================================================
+# Blender is required for actual femoral/tibial Boolean
+# cutting operations.
+#
+# Blender is NOT installed through pip.
+# Install Blender separately on the backend/server.
+# Recommended runtime: Blender 4.x
+#
+# Example headless usage:
+# blender --background --python scripts/run_cutting.py
+#

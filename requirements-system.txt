@@ -1,0 +1,13 @@
+# KneeFit3D System Requirements
+
+# Blender is required for actual mesh Boolean cutting.
+
+Blender >= 4.0
+
+# Backend expectation:
+# - Blender executable must be available in PATH
+# - Blender must support headless/background execution
+# - bpy is provided by Blender's own Python runtime
+
+# Example:
+# blender --background --python scripts/run_cutting.py

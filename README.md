@@ -403,3 +403,142 @@ Recommended implementation sequence:
 ```
 
 Implant-selection logic should remain in the backend Python modules and should not be duplicated independently in the frontend.
+
+---
+
+# Blender Cutting Runtime
+
+The current KneeFit3D bone-resection workflow still depends on **Blender** for the actual mesh cutting and Boolean operations.
+
+The Python modules in `src/` handle:
+
+```text
+implant library discovery
+↓
+implant sizing
+↓
+implant ranking
+↓
+cutting-block selection
+↓
+result metadata
+```
+
+However, the actual femoral and tibial bone cutting stage is still executed using Blender and `bpy`.
+
+Current architecture:
+
+```text
+Patient Bone STL
+      ↓
+Python Backend
+      ↓
+Implant Sizing / Ranking
+      ↓
+Select Appropriate Cutting Asset
+      ↓
+Launch Blender
+      ↓
+Import Bone STL
+      ↓
+Import Cutting Block / Cutter Geometry
+      ↓
+Apply Required Transformations
+      ↓
+Boolean Bone Resection
+      ↓
+Export Resected Bone STL
+      ↓
+Virtual Implant Fitting
+      ↓
+Return STL + Metrics to Backend
+      ↓
+Web 3D Viewer
+```
+
+## Blender Requirement
+
+Recommended runtime:
+
+```text
+Blender 4.x
+```
+
+For backend/server deployment, Blender should preferably run in headless mode.
+
+Example:
+
+```bash
+blender --background --python scripts/run_cutting.py -- --bone patient_femur.stl --size M3 --side Left
+```
+
+The backend Blender script should perform:
+
+```text
+1. Load patient bone STL
+2. Load the selected cutting geometry
+3. Apply the required mesh transformations
+4. Execute Boolean Difference / bone resection
+5. Export the resected bone STL
+6. Export any implant or intermediate STL required by the viewer
+7. Return output file paths to the Python backend
+```
+
+Important:
+
+`src/cutting.py` currently resolves the correct implant and cutting-block assets.
+
+It does not replace Blender's Boolean cutting stage.
+
+Therefore, the backend team should treat Blender as a separate geometry-processing runtime or service.
+
+---
+
+# Backend Implementation Boundary
+
+## Python Backend
+
+Python is responsible for:
+
+```text
+✓ loading geometry metadata
+✓ femoral implant sizing
+✓ tibial candidate evaluation
+✓ coverage calculation
+✓ underhang calculation
+✓ overhang calculation
+✓ footprint RMSE
+✓ implant ranking
+✓ selected-size decision
+✓ locating the required STL assets
+✓ preparing the cutting job
+```
+
+## Blender
+
+Blender is responsible for:
+
+```text
+✓ importing bone STL
+✓ importing cutter / cutting-block geometry
+✓ mesh transformations required by the cutting workflow
+✓ Boolean Difference operations
+✓ generating resected femur / tibia meshes
+✓ exporting resulting STL files
+```
+
+## Web Frontend
+
+The web frontend should be responsible only for:
+
+```text
+✓ requesting processing jobs
+✓ displaying processing status
+✓ displaying selected implant information
+✓ displaying fitting metrics
+✓ rendering returned 3D STL models
+```
+
+Implant-sizing and ranking logic should not be duplicated in the frontend.
+
+The backend Python source should remain the single source of truth for implant selection.
