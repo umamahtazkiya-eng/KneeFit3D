@@ -1,0 +1,74 @@
+project:
+  name: KneeFit3D
+  mode: research-prototype
+
+coordinate_system:
+  x_axis: AP
+  y_axis: ML
+  z_axis: proximal_distal
+  femur_distal_at_min_z: true
+
+femur:
+  implant_library: github_original
+  available_sizes:
+    - S1
+    - S2
+    - S3
+    - S4
+    - M1
+    - M2
+    - M3
+    - M4
+    - L1
+    - L2
+    - L3
+    - L4
+
+  sizing:
+    method: AP_ML_dimensional_RMSE
+
+  note: >
+    Femoral virtual fitting uses the original GitHub implant
+    and cutting geometry. Persona femoral research proxies are
+    retained for reference but are not used in the production
+    femoral seating pipeline.
+
+tibia:
+  implant_library: persona_corrected_research
+
+  available_sizes:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    - J
+
+  ranking:
+    method: risk_aware_hierarchical
+
+    overhang:
+      preferred_max_mm: 3.0
+      compromise_max_mm: 5.0
+
+    weights:
+      overhang: 0.45
+      underhang: 0.25
+      rmse: 0.20
+      coverage: 0.10
+
+  note: >
+    Ranking values and thresholds are research heuristics and
+    are not clinically validated limits.
+
+geometry:
+  persona_femoral:
+    geometry_type: research_scaled_proxy
+    oem_cad: false
+
+  persona_tibial:
+    geometry_type: research_scaled_corrected_proxy
+    oem_cad: false

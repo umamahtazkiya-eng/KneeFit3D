@@ -1,0 +1,7 @@
+# KneeFit3D geometry / fitting dependencies
+numpy
+pandas
+scipy
+trimesh
+shapely
+PyYAML
